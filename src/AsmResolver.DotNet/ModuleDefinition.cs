@@ -405,7 +405,7 @@ namespace AsmResolver.DotNet
         }
 
         /// <inheritdoc />
-        ModuleDefinition IModuleProvider.Module => this;
+        ModuleDefinition IModuleProvider.ContextModule => this;
 
         /// <summary>
         /// Gets or sets the name of the module.

@@ -46,7 +46,7 @@ namespace AsmResolver.DotNet.Signatures.Parsing
             type.AcceptVisitor(this);
 
             var assembly = type.Scope?.GetAssembly();
-            if (assembly is not null && assembly != type.Module?.Assembly)
+            if (assembly is not null && assembly != type.ContextModule?.Assembly)
             {
                 if (assembly.IsCorLib && _omitCorLib)
                     return;
